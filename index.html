@@ -1,0 +1,92 @@
+---
+title: Home
+---
+
+<section class="hero is-info is-large is-fullheight-with-navbar hero--home">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">
+                Hiking Costa Rica:
+            </h1>
+            <h2 class="subtitle is-3">
+                From Sea to Sea
+            </h2>
+
+            <p class="is-size-5 is-half">A father and son’s journey from the Caribbean to the Pacific</p>
+
+            <br>
+
+            <p>Signup for updates:</p>
+            <div class="field has-addons mt-2">
+                <div class="control">
+                    <input class="input" type="email" placeholder="your email address">
+                </div>
+                <div class="control">
+                    <a class="button is-info">
+                        Join Newsletter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-aos="flip-up" data-aos-duration="1000">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <div class="column">
+                {% include img.html src="/assets/day-00/IMG_1152.JPG" caption="George smiling" %}
+            </div>
+            <div class="column">
+                <article>
+                    <p class="journal--george">
+                        <strong>George Hornbein</strong>
+                        <br>
+                        I have made two hikes across Costa Rica, one in December of 2017 with my friend Gail Haggard and one in December, 2018
+                        with my son Drew and Rich Larson, aka Skittles. Both hikes were made with our guide, Orlando Zamares, who has crossed
+                        the country more than 30 times.
+                        Drew and I both wrote of our adventure.
+                    </p>
+                </article>
+            </div>
+        </div>
+        <div class="columns is-vcentered">
+            <div class="column">
+                <article>
+                    <p class="journal--drew">
+                        <strong>Drew Hornbein</strong>
+                        <br>
+                        On November 30th, 2018 I set off on an adventure with my 80-year-old dad, our friend Skittles, and our guide Orlando
+                        on
+                        a hike across Costa Rica from the Caribbean coast to the Pacific. I kept a written journal and captured the random
+                        tangents of a wandering mind.
+                    </p>
+                </article>
+            </div>
+            <div class="column">
+                {% include img.html src="/assets/day-00/IMG_1930.JPG" caption="Drew & George" %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container map">
+        <div class="columns">
+            <div class="column">
+                {% include full-map-web.svg %}
+            </div>
+            <div class="column is-narrow">
+                <ol id="mapLegend" class="map__legend">
+                    {% for journal in site.journals %}
+                    <li>
+                        <a class="navbar-item" href="{{ journal.url }}">
+                            {{ journal.title }} - {{ journal.destination }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>

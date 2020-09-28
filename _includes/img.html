@@ -1,0 +1,16 @@
+{% comment %}
+round   {bool}      the image is round
+class   {string}    css classes
+src     {string}    image source
+caption {string}    image caption
+
+include img.html round="true" class="is-4by3" src="/assets/" caption="Drew, Orlando, Skittles on the right"}
+{% endcomment %}
+
+{% if include.round %}
+    {% assign class = class + ' is-rounded' %}
+{% endif %}
+<figure class="image {{ include.class }}">
+    <img src="{{ include.src | relative_url }}">
+    <figcaption>{{ include.caption }}</figcaption>
+</figure>

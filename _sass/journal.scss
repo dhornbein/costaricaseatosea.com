@@ -1,0 +1,32 @@
+$font-drew-family: felt-tip-roman, sans-serif;
+$font-drew-weight: 400;
+$font-drew-style: normal;
+
+$font-george-family: Georgia, sans-serif;
+$font-george-weight: 400;
+$font-george-style: normal;
+
+.journal--george {
+    font-family: $font-george-family;
+    font-weight: $font-george-weight;
+    font-style: $font-george-style;
+}
+.journal--drew {
+    font-family: $font-drew-family;
+    font-weight: $font-drew-weight;
+    font-style: $font-drew-style;
+    font-size: 1.2em;
+    line-height: 1.5rem;
+}
+
+.journal {
+    .hero {
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.journal--box {
+    background-color: $scheme-main;
+    padding: 1rem;
+}

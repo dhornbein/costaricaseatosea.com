@@ -1,0 +1,11 @@
+// BULMA Overwrites
+$title-family: arvo, serif;
+$title-weight: 400;
+$title-strong-weight: 700;
+$subtitle-family: $title-family;
+$subtitle-weight: $title-weight;
+$subtitle-strong-weight: $title-strong-weight;
+
+@import "../node_modules/bulma/bulma";
+
+@function zerofill($i) { @return #{str-slice("00",0,2 - str-length(#{$i}))}$i; }

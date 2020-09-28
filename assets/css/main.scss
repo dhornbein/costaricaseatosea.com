@@ -1,0 +1,30 @@
+---
+---
+
+@import url("https://use.typekit.net/tth8xxw.css");
+@import "base";
+@import "map";
+@import "journal";
+
+.has-bg-img-right {
+    background-position: right center;
+}
+
+.hero.is-dark .title,
+.hero.is-dark .subtitle {
+    text-shadow: 0 1px 3px rgba($dark, .3);
+}
+
+.hero--home {
+    background: rgb(38,36,88);
+    background-image: url(/assets/maramar-cover-map-photos.png),
+                      url(/assets/patterns/white-waves.png),
+                      linear-gradient(175deg, rgba(38,36,88,1) 0%, rgba(59,111,173,1) 100%);
+    background-position: right center;
+    background-repeat: no-repeat, repeat;
+    background-size: auto 100%, auto;
+
+    .hero-body .column {
+        background-color: rgba(#233252, .6);
+    }
+}
