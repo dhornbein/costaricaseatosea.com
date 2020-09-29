@@ -11,7 +11,7 @@ include img.html round="true" class="is-4by3" src="/assets/" caption="Drew, Orla
 {% assign class = include.class %}
 
 {% if include.round %}
-    {% assign class = class | append: ' is-rounded' %}
+    {% assign imgClass = ' is-rounded' %}
 {% endif %}
 
 {% if include.frame %}
@@ -19,6 +19,6 @@ include img.html round="true" class="is-4by3" src="/assets/" caption="Drew, Orla
 {% endif %}
 
 <figure class="image {{ class }}">
-    <img src="{{ include.src | relative_url }}">
+    <img class="{{ imgClass }}" src="{{ include.src | relative_url }}">
     <figcaption>{{ include.caption }}</figcaption>
 </figure>
