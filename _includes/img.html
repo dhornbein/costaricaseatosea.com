@@ -3,14 +3,22 @@ round   {bool}      the image is round
 class   {string}    css classes
 src     {string}    image source
 caption {string}    image caption
+frame   {bool}      adds frame around figure
 
-include img.html round="true" class="is-4by3" src="/assets/" caption="Drew, Orlando, Skittles on the right"}
+include img.html round="true" class="is-4by3" src="/assets/" caption="Drew, Orlando, Skittles on the right"
 {% endcomment %}
 
+{% assign class = include.class %}
+
 {% if include.round %}
-    {% assign class = class + ' is-rounded' %}
+    {% assign class = class | append: ' is-rounded' %}
 {% endif %}
-<figure class="image {{ include.class }}">
+
+{% if include.frame %}
+    {% assign class = class | append: ' has-frame' %}
+{% endif %}
+
+<figure class="image {{ class }}">
     <img src="{{ include.src | relative_url }}">
     <figcaption>{{ include.caption }}</figcaption>
 </figure>

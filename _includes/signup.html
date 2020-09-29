@@ -1,0 +1,27 @@
+{% comment %}
+class       {string}    css classes
+placeholder {string}    input placeholder text
+type        {string}    input type
+submit      {string}    submit label
+center      {bool}      center form group
+
+{% endcomment %}
+
+{% assign class = include.class %}
+
+{% if include.center %}
+    {% assign class = class | append: ' is-grouped is-grouped-centered' %}
+{% else %}
+    {% assign class = class | append: ' has-addons' %}
+{% endif %}
+
+<div class="field {{ class }}">
+    <div class="control">
+        <input class="input" type="{{ include.type | default: 'email' }}" placeholder="{{ include.placeholder | default: 'your email address' }}">
+    </div>
+    <div class="control">
+        <a class="button is-info">
+            {{ include.submit | default: 'Join Newsletter' }}
+        </a>
+    </div>
+</div>

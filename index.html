@@ -17,25 +17,17 @@ title: Home
             <br>
 
             <p>Signup for updates:</p>
-            <div class="field has-addons mt-2">
-                <div class="control">
-                    <input class="input" type="email" placeholder="your email address">
-                </div>
-                <div class="control">
-                    <a class="button is-info">
-                        Join Newsletter
-                    </a>
-                </div>
-            </div>
+            {% include signup.html class="mt-2" %}
         </div>
     </div>
 </section>
 
-<section class="section" data-aos="flip-up" data-aos-duration="1000">
+<section class="section">
     <div class="container">
-        <div class="columns is-vcentered">
-            <div class="column">
-                {% include img.html src="/assets/day-00/IMG_1152.JPG" caption="George smiling" %}
+        <h1 class="title">The Hikers</h1>
+        <div class="columns is-vcentered is-reversed-column">
+            <div class="column" data-aos="flip-up" data-aos-duration="1000">
+                {% include img.html src="/assets/day-00/IMG_1152.JPG" caption="George smiling" frame="true" %}
             </div>
             <div class="column">
                 <article>
@@ -52,41 +44,95 @@ title: Home
         </div>
         <div class="columns is-vcentered">
             <div class="column">
-                <article>
+                {% include img.html src="/assets/day-00/IMG_1930.JPG" caption="Drew & George" frame="true" %}
+            </div>
+            <div class="column">
+                <article data-aos="flip-up" data-aos-duration="1000">
                     <p class="journal--drew">
                         <strong>Drew Hornbein</strong>
                         <br>
                         On November 30th, 2018 I set off on an adventure with my 80-year-old dad, our friend Skittles, and our guide Orlando
-                        on
-                        a hike across Costa Rica from the Caribbean coast to the Pacific. I kept a written journal and captured the random
+                        on a hike across Costa Rica from the Caribbean coast to the Pacific. I kept a written journal and captured the random
                         tangents of a wandering mind.
                     </p>
                 </article>
             </div>
+        </div>
+        <div class="columns is-vcentered is-reversed-column">
             <div class="column">
-                {% include img.html src="/assets/day-00/IMG_1930.JPG" caption="Drew & George" %}
+                {% include img.html src="/assets/day-00/IMG_1616.JPG" caption="Orlando with his granddaughter" frame="true" %}
+            </div>
+            <div class="column">
+                <article>
+                    <p>
+                        <strong>Orlando Zamares</strong>
+                        <br>
+                        Having crossed Costa Rica over 30 times Orlando guided the group.
+                    </p>
+                </article>
+            </div>
+        </div>
+        <div class="columns is-vcentered">
+            <div class="column">
+                {% include img.html src="/assets/day-00/IMG_1129.JPG" frame="true" %}
+            </div>
+            <div class="column">
+                <article>
+                    <p>
+                        <strong>Rich "Skittles" Larson</strong>
+                        <br>
+                        Having crossed Costa Rica over 30 times Orlando guided the group.
+                    </p>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
 <section class="section">
-    <div class="container map">
-        <div class="columns">
-            <div class="column">
-                {% include full-map-web.svg %}
+    <div class="container">
+        <h1 class="title">The Hike</h1>
+        <p>
+            From November 30 to December 17th George, Drew, and Skittles were lead by Orlanda from Limón to Quepos Costa Rica.
+            The hike took 18 days across <strong>271 miles (333 Km)</strong>.
+        </p>
+    </div>
+</section>
+
+<div class="map">
+    <div class="map__container">
+        <div class="map__label">
+            <p class="title">18 Days</p>
+            <p class="subtitle">Limón to Quepos</p>
+        </div>
+        {% include full-map-web.svg %}
+    </div>
+    <div class="map__container-elev">
+        <div class="container">
+            <p class="pl-1"><strong>Elevation Profile</strong></p>
+        </div>
+        {% include full-map-elevation.svg %}
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-multiline">
+            {% for day in site.data.hike %}
+            <div class="column is-one-third">
+                {% if site.journals[forloop.index0] %}
+                <a href="{{ site.journals[forloop.index0].url }}">
+                    <strong>{{ site.journals[forloop.index0].title }}</strong>
+                    <br>
+                    {{ site.journals[forloop.index0].destination }}
+                </a>
+                {% else %}
+                    <strong>Day {{ forloop.index }}</strong> <small class="tag is-light">Coming soon!</small>
+                    <br>
+                    {{ day }}
+                {% endif %}
             </div>
-            <div class="column is-narrow">
-                <ol id="mapLegend" class="map__legend">
-                    {% for journal in site.journals %}
-                    <li>
-                        <a class="navbar-item" href="{{ journal.url }}">
-                            {{ journal.title }} - {{ journal.destination }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ol>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

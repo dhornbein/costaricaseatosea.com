@@ -1,13 +1,44 @@
 .map {
-
+    position: relative;
 }
 
 $map-animation-duration: 500ms;
 
 .map__svg {
-    width: 100vw;
-    max-width: 600px;
+    display: block;
+}
+
+.map__container {
+    background: url(../day-00/sat-map-clean.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    max-height: 80vh;
+    position: relative;
+}
+
+.map__label {
+    position: absolute;
+    top: $column-gap;
+    left: $column-gap;
+    max-width: 50%;
+
+    .title, .subtitle {
+        color: $white;
+    }
+}
+
+.map__container-elev {
+}
+
+#mapSVG {
+    width: 100%;
+    height: auto;
+    max-width: $widescreen;
     path {
+        stroke: $white;
         pointer-events: bounding-box;
         cursor: pointer;
         &:hover {
@@ -15,43 +46,36 @@ $map-animation-duration: 500ms;
             
         }
 
-        stroke-dasharray: 140;
-        stroke-dashoffset: 140;
+        stroke-dasharray: 220;
+        stroke-dashoffset: 220;
         animation: dash $map-animation-duration ease-out forwards;
     }
-
-    @for $i from 01 through 17 {
-        $t: zerofill($i);
-        #day#{$t} {
+  
+    @for $i from 01 through 18 {
+        #day#{$i} {
             animation-delay: $map-animation-duration * $i;
+        }
+    }
+
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 220;
+        }
+        to {
+            stroke-dashoffset: 0;
         }
     }
 }
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 140;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
+#mapElevSVG {
+    width: 100%;
+    height: auto;
 
-.map__legend {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    list-style: none;;
-
-    li {
-        flex-grow: 1;
-    }
-
-    li a {
+    polygon {
+        pointer-events: bounding-box;
         cursor: pointer;
         &:hover {
-            background-color: $primary;
+            fill: $primary;
         }
     }
 }

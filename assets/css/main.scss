@@ -6,6 +6,15 @@
 @import "map";
 @import "journal";
 
+.is-reversed-column {
+    flex-direction: row-reverse;
+}
+
+.has-frame {
+    padding: $column-gap;
+    border: 1px solid $grey-lighter;
+}
+
 .has-bg-img-right {
     background-position: right center;
 }
