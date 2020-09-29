@@ -19,17 +19,26 @@ title: Home
     </div>
 </div>
 
-{% include img.html src="/assets/day-00/IMG_1391.JPG" class="mt-2" %}
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <p class="journal--drew">
+                    On <strong>November 30th, 2018</strong> I set off on an adventure with my 80-year-old dad, our friend Skittles, and our guide Orlando
+                    on a hike across Costa Rica from the Caribbean coast to the Pacific. We both kept journals of our adventure.
+                    <br>
+                    <br>
+                    We've put them together into a book and this website. <a href="{{ site.journals[0].url | relative_url }}">Start reading Day 1</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include img.html src="/assets/day-00/IMG_1391.JPG" caption="From right: George, Drew, Skittles, and Orlando" %}
 
 <section class="section">
     <div class="container">
-        <p class="journal--drew">
-            On <strong>November 30th, 2018</strong> I set off on an adventure with my 80-year-old dad, our friend Skittles, and our guide Orlando
-            on a hike across Costa Rica from the Caribbean coast to the Pacific. We both kept journals of our adventure.
-            <br>
-            <br>
-            We've put them together into a book and this website. <a href="{{ site.journals[0].url | relative_url }}">Start reading Day 1</a>.
-        </p>
         
         <br>
         <div class="has-text-centered">
@@ -41,7 +50,7 @@ title: Home
 
 <section class="section">
     <div class="container">
-        <h1 class="title">The Hikers</h1>
+        <h1 class="title has-text-centered-mobile">The Hikers</h1>
         <div class="columns is-vcentered is-reversed-column">
             <div class="column" data-aos="flip-up" data-aos-duration="1000">
                 {% include img.html src="/assets/day-00/IMG_1152.JPG" caption="George smiling" frame="true" %}
@@ -108,7 +117,7 @@ title: Home
 
 <section class="section">
     <div class="container">
-        <h1 class="title">The Hike</h1>
+        <h1 class="title has-text-centered-mobile">The Hike</h1>
         <p>
             From November 30 to December 17th George, Drew, and Skittles were lead by Orlanda from Limón to Quepos Costa Rica.
             The hike took 18 days across <strong>271 miles (333 Km)</strong>.

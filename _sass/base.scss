@@ -1,5 +1,6 @@
 // BULMA Overwrites
-$title-family: arvo, serif;
+$family-primary: arvo, serif;
+$title-family: $family-primary;
 $title-weight: 400;
 $title-strong-weight: 700;
 $subtitle-family: $title-family;

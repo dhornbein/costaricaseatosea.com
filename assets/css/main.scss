@@ -19,6 +19,11 @@
     background-position: right center;
 }
 
+.image figcaption {
+    font-family: $font-drew-family;
+    text-align: center;
+}
+
 @include mobile {
     .field.is-grouped.is-grouped-centered {
         flex-direction: column;
