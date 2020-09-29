@@ -19,14 +19,40 @@ $map-animation-duration: 500ms;
     position: relative;
 }
 
+.map--hero {
+    .map__container {
+        max-height: calc(100vh - #{$navbar-height});
+    }
+    path {
+        stroke-width: 8px;
+    }
+}
+
+// #mapSingleSVG {
+//     width: 100%;
+//     height: auto;
+//     display: block;
+//     #route {
+//         stroke: #fff;
+//         stroke-width: 3px;
+//     }
+// }
+
 .map__label {
     position: absolute;
     top: $column-gap;
     left: $column-gap;
-    max-width: 50%;
 
-    .title, .subtitle {
+    .title, .subtitle, p {
         color: $white;
+    }
+
+    &.map__label--right {
+        top:unset;
+        left:unset;
+        bottom: $column-gap;
+        right: $column-gap;
+        max-width: 50%;
     }
 }
 

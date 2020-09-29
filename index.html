@@ -2,22 +2,39 @@
 title: Home
 ---
 
-<section class="hero is-info is-large is-fullheight-with-navbar hero--home">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title is-1">
+<div class="map map--hero">
+    <div class="map__container">
+        <div class="map__label">
+            <h1 class="title is-1 is-size-4-mobile">
                 Hiking Costa Rica:
             </h1>
-            <h2 class="subtitle is-3">
+            <h2 class="subtitle is-3 is-size-5-mobile">
                 From Sea to Sea
             </h2>
+        </div>
+        <div class="map__label map__label--right">
+            <p class="is-size-5 is-half is-size-6-mobile">A father and son’s journey from the Caribbean to the Pacific</p>
+        </div>
+        {% include full-map-web.svg %}
+    </div>
+</div>
 
-            <p class="is-size-5 is-half">A father and son’s journey from the Caribbean to the Pacific</p>
+{% include img.html src="/assets/day-00/IMG_1391.JPG" class="mt-2" %}
 
+<section class="section">
+    <div class="container">
+        <p class="journal--drew">
+            On <strong>November 30th, 2018</strong> I set off on an adventure with my 80-year-old dad, our friend Skittles, and our guide Orlando
+            on a hike across Costa Rica from the Caribbean coast to the Pacific. We both kept journals of our adventure.
             <br>
-
+            <br>
+            We've put them together into a book and this website. <a href="{{ site.journals[0].url | relative_url }}">Start reading Day 1</a>.
+        </p>
+        
+        <br>
+        <div class="has-text-centered">
             <p>Signup for updates:</p>
-            {% include signup.html class="mt-2" %}
+            {% include signup.html class="mt-2" center="true" %}
         </div>
     </div>
 </section>

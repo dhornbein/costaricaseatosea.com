@@ -19,6 +19,16 @@
     background-position: right center;
 }
 
+@include mobile {
+    .field.is-grouped.is-grouped-centered {
+        flex-direction: column;
+        .control {
+            margin-right: 0;
+            margin-bottom: 0.75rem;
+        }
+    }
+}
+
 .hero.is-dark .title,
 .hero.is-dark .subtitle {
     text-shadow: 0 1px 3px rgba($dark, .3);
