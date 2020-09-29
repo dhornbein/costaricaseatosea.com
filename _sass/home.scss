@@ -1,0 +1,9 @@
+@include desktop {
+    .intro {
+        background: white;
+        padding: 3em;
+        margin: -6em;
+        z-index: 1;
+        box-shadow: 0 0 20px #0005;
+    }
+}

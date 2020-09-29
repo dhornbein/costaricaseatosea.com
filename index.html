@@ -1,19 +1,24 @@
 ---
 title: Home
+hero:
+ title: Hiking Costa Rica
+ subtitle: From Sea to Sea
+ tagline: A father and son’s journey from the Caribbean to the Pacific
 ---
 
 <div class="map map--hero">
     <div class="map__container">
         <div class="map__label">
             <h1 class="title is-1 is-size-4-mobile">
-                Hiking Costa Rica:
+                {{ page.hero.title }}
             </h1>
             <h2 class="subtitle is-3 is-size-5-mobile">
-                From Sea to Sea
+                {{ page.hero.subtitle }}
             </h2>
+            <p class="is-size-5 is-hidden-touch">{{ page.hero.tagline }}</p>
         </div>
-        <div class="map__label map__label--right">
-            <p class="is-size-5 is-half is-size-6-mobile">A father and son’s journey from the Caribbean to the Pacific</p>
+        <div class="map__label map__label--right is-hidden-desktop">
+            <p class="is-size-6">{{ page.hero.tagline }}</p>
         </div>
         {% include full-map-web.svg %}
     </div>
@@ -22,28 +27,36 @@ title: Home
 <section class="section">
     <div class="container">
         <div class="columns is-centered">
-            <div class="column is-half">
+            <div class="column is-half intro">
                 <p class="journal--drew">
                     On <strong>November 30th, 2018</strong> I set off on an adventure with my 80-year-old dad, our friend Skittles, and our guide Orlando
                     on a hike across Costa Rica from the Caribbean coast to the Pacific. We both kept journals of our adventure.
                     <br>
                     <br>
-                    We've put them together into a book and this website. <a href="{{ site.journals[0].url | relative_url }}">Start reading Day 1</a>.
+                    We've put them together into a book and this website.
+                </p>
+                <br>
+                <div class="buttons journal--drew is-centered">
+                    <a class="button is-primary is-large" href="{{ site.journals[0].url | relative_url }}">👉 Read Day 1</a>
+                    <a class="button is-light is-large" href="{{ site.pdf }}">📖 View PDF Book*</a>
+                </div>
+                <p class="journal--drew has-text-right">
+                    <small>* This is a PDF draft version</small>
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-{% include img.html src="/assets/day-00/IMG_1391.JPG" caption="From right: George, Drew, Skittles, and Orlando" %}
+{% include img.html src="/assets/day-00/IMG_1391.JPG" caption="From right: George, Drew, Skittles, and Orlando" class="has-inside-caption" %}
 
-<section class="section">
+<section class="hero is-success is-bold">
     <div class="container">
-        
-        <br>
-        <div class="has-text-centered">
-            <p>Signup for updates:</p>
-            {% include signup.html class="mt-2" center="true" %}
+        <div class="hero-body">
+            <div class="has-text-centered">
+                <p>Signup for updates:</p>
+                {% include signup.html class="mt-2" center="true" %}
+            </div>
         </div>
     </div>
 </section>

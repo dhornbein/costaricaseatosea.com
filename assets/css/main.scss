@@ -3,25 +3,13 @@
 
 @import url("https://use.typekit.net/tth8xxw.css");
 @import "base";
+@import "images";
 @import "map";
+@import "home";
 @import "journal";
 
 .is-reversed-column {
     flex-direction: row-reverse;
-}
-
-.has-frame {
-    padding: $column-gap;
-    border: 1px solid $grey-lighter;
-}
-
-.has-bg-img-right {
-    background-position: right center;
-}
-
-.image figcaption {
-    font-family: $font-drew-family;
-    text-align: center;
 }
 
 @include mobile {

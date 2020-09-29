@@ -1,0 +1,26 @@
+.has-bg-img-right {
+    background-position: right center;
+}
+
+.image {
+    &.has-frame {
+        padding: $column-gap;
+        border: 1px solid $grey-lighter;
+    }
+
+    &.has-inside-caption {
+        position: relative;
+        figcaption {
+            background-color: rgba($white, .8);
+            padding: 2px .75rem;
+            position: absolute;
+            right: .75rem;
+            bottom: .75rem;
+        }
+    }
+
+    figcaption {
+        font-family: $font-drew-family;
+        text-align: center;
+    }
+}

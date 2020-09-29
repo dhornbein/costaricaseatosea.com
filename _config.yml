@@ -17,6 +17,7 @@ title: Hiking Costa Rica From Sea to Sea
 email: maramar@dhornbein.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+pdf: https://drive.google.com/file/d/1ePvW_bEG1kztJJ600Gof0WRaNN4-yYdW/view?usp=sharing
 
 # Build settings
 markdown: kramdown
