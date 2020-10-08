@@ -2,6 +2,14 @@
     background-position: right center;
 }
 
+.has-img-cover {
+    max-height: 100vh;
+    img {
+        object-fit: cover;
+        max-height: 100vh;
+    }
+}
+
 .image {
     &.has-frame {
         padding: $column-gap;
