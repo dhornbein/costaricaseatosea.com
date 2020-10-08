@@ -1,5 +1,6 @@
 
 AOS.init();
+stickybits(".is-sticky");
 
 // Nav menu burger
 document.addEventListener('DOMContentLoaded', () => {

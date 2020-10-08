@@ -1,0 +1,23 @@
+{
+  "name": "mar-a-mar-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "bulma": "^0.9.0",
+    "stickybits": "^3.7.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhornbein/costaricaseatosea.com.git"
+  },
+  "author": "Drew Hornbein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhornbein/costaricaseatosea.com/issues"
+  },
+  "homepage": "https://github.com/dhornbein/costaricaseatosea.com#readme"
+}

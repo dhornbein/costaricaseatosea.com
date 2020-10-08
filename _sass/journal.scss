@@ -11,6 +11,15 @@
     line-height: 1.5rem;
 }
 
+.journal__label {
+    background-color: $white;
+    padding: $column-gap;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba($black, .2);
+    &.js-is-sticky {
+    }
+}
+
 .journal {
     .hero {
         background-size: cover;
