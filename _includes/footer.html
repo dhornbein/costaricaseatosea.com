@@ -3,7 +3,11 @@
         <div class="columns is-centered">
             <div class="column is-half">
                 <p>Be the first to know when the next journal is published!</p>
+                {% if page.url == "/" %}
+                <a href="#intro">Join Newsletter</a>
+                {% else %}
                 {% include signup.html center="true" %}
+                {% endif %}
             </div>
         </div>
         <p>
