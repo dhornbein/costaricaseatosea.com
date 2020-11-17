@@ -5,3 +5,46 @@ layout: base
 <div class="journal day-{{ page.slug }}">
     {{ content }}
 </div>
+
+{% for item in site.journals %}
+    {%- if item.slug == page.slug -%}
+        {% assign next_i = forloop.index0 | plus: 1 %}
+        {% assign prev_i = forloop.index0 | minus: 1 %}
+    {%- endif -%}
+{% endfor %}
+
+<div class="journal__footer">
+    <div class="journal__footer-button journal__footer--prev">
+        {% if prev_i > -1 %}
+            <a href="{{ site.journals[prev_i].url }}">
+                <div class="is-size-4">
+                    {{ site.journals[prev_i].title }}
+                </div>
+                {{ site.journals[prev_i].destination }}
+            </a>
+        {% else %}
+            <a href="/">
+                <div class="is-size-4">
+                Back Home
+                </div>
+            </a>
+        {% endif %}
+    </div>
+    <div class="journal__footer-button journal__footer--next">
+        {% if site.journals[next_i] %}
+            <a href="{{ site.journals[next_i].url }}">
+                <div class="is-size-4">
+                    {{ site.journals[next_i].title }}
+                </div>
+                {{ site.journals[next_i].destination }}
+            </a>
+        {% else %}
+            <a>
+                <div class="is-size-4">
+                    Next Day Coming Soon...
+                </div>
+                Signup for our newsletter to know when!
+            </a>
+        {% endif %}
+    </div>
+</div>
