@@ -28,5 +28,20 @@
 			"\t${9:round=\"true\"}",
 			"%}"
 		]
+	},
+	"section": {
+		"scope": "html,markdown",
+		"prefix": ["section"],
+		"body": [
+			"<section class=\"section\">",
+			"\t<div class=\"container\">",
+			"\t\t<div class=\"columns is-centered\">",
+			"\t\t\t<div class=\"column is-half content\">",
+			"\t\t\t\t$1",
+			"\t\t\t</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"</section>"
+		]
 	}
 }
